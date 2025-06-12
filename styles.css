@@ -169,7 +169,8 @@ body {
 .description {
     font-size: 1.1rem;
     color: #0d0f36;
-    margin-bottom: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
 }
 
