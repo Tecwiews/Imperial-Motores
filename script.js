@@ -127,3 +127,30 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => trackClick(btn, 'CTA Click'));
     });
 });
+
+// Menu hambúrguer mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('menu');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+    
+    // Fechar menu ao clicar em um link
+    menu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            mobileMenuToggle.classList.remove('active');
+            menu.classList.remove('active');
+        }
+    });
+    
+    // Fechar menu ao redimensionar tela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mobileMenuToggle.classList.remove('active');
+            menu.classList.remove('active');
+        }
+    });
+});
