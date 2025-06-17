@@ -37,6 +37,18 @@ body {
     align-items: center;
 }
 
+/* Nome da empresa mobile */
+.company-name-mobile {
+    display: none;
+}
+
+.company-name-mobile h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -577,28 +589,39 @@ body {
 @media (max-width: 768px) {
     /* Header */
     .header .container {
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 20px;
-        gap: 1rem;
-    }
-    
-    .logo {
-        order: 1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        padding: 1rem 20px;
     }
     
     .logo-container {
         flex-direction: row;
-        gap: 0.8rem;
+        gap: 0;
+    }
+
+    /* Esconder logo no mobile */
+    
+    .logo {
+        display: none;
+    }
+
+    .logo-image {
+        display: none;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.4rem;
     }
     
     .mobile-menu-toggle {
         display: flex;
-        order: 2;
+    }
+
+    /* Mostrar só nome */
+    .company-name-mobile {
+        display: block;
+    
     }
     
     .menu {
